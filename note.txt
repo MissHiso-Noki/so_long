@@ -1,0 +1,10 @@
+tar -xzf *.tar
+cd minilibx_
+make
+cd test
+./mlx-test
+
+sudo cp mlx.h /usr/local/include
+sudo cp libmlx.a /usr/local/lib
+
+compile : clang main.c -lX11 -lXext -lmlx
